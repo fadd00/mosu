@@ -13,7 +13,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-blue-100 bg-opacity-70" />
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 mb-6 drop-shadow-lg">Build confidence. Get the job.</h1>
-          <p className="text-lg md:text-2xl text-blue-800 mb-8 max-w-2xl">Forage helps students gain real-world experience through virtual job simulations, so you can stand out to employers and land your dream role.</p>
+          <p className="text-lg md:text-2xl text-blue-800 mb-8 max-w-2xl">Mosu helps students gain real-world experience through virtual job simulations, so you can stand out to employers and land your dream role.</p>
           <a
             href="#"
             className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition text-lg"
@@ -26,8 +26,8 @@ export default function HomePage() {
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">What is Forage?</h2>
-          <p className="text-lg text-gray-700">Forage offers virtual job simulations designed by top companies, giving students the opportunity to build skills, gain confidence, and showcase their abilities to future employers—all for free.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">What is Mosu?</h2>
+          <p className="text-lg text-gray-700">Mosu offers virtual job simulations designed by top companies, giving students the opportunity to build skills, gain confidence, and showcase their abilities to future employers—all for free.</p>
         </div>
       </section>
 
@@ -37,7 +37,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">What Our Students Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
-              quote="Forage gave me the confidence to apply for jobs I never thought I could get."
+              quote="Mosu gave me the confidence to apply for jobs I never thought I could get."
               author="Alex Johnson"
               role="Student, University of Sydney"
             />
@@ -58,7 +58,7 @@ export default function HomePage() {
       {/* Enroll Section */}
       <section className="py-20 bg-blue-600 text-white text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Ready to Start Your Dream Career?</h2>
-        <p className="text-lg mb-8">Join thousands of students building skills and confidence with Forage.</p>
+        <p className="text-lg mb-8">Join thousands of students building skills and confidence with Mosu.</p>
         <a
           href="#"
           className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-100 transition text-lg"

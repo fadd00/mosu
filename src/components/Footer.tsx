@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 grid grid-cols-1 md:grid-cols-6 gap-8">
         {/* First Column: Logo & Mission */}
         <div className="md:col-span-2 flex flex-col space-y-4">
-          <span className="text-2xl font-bold text-blue-600">Forage</span>
+          <span className="text-2xl font-bold text-blue-600">mosu</span>
           <p className="text-gray-600 text-sm">We're on a mission to get motivated students into great jobs.</p>
         </div>
         {/* Link Columns */}
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
       {/* Bottom Section */}
       <div className="border-t py-6 px-4 flex items-center justify-between mx-auto max-w-7xl text-sm text-gray-500">
-        <span>&copy; {new Date().getFullYear()} Forage. All rights reserved.</span>
+        <span>&copy; {new Date().getFullYear()} mosu. All rights reserved.</span>
         <div className="flex space-x-4">
           <a href="#" aria-label="LinkedIn" className="hover:text-blue-600"><Linkedin size={20} /></a>
           <a href="#" aria-label="TikTok" className="hover:text-blue-600"><TikTokIcon /></a>

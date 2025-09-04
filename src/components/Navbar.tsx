@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Left: Logo */}
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-blue-600">Forage</span>
+          <span className="text-2xl font-bold text-blue-600">MOSU</span>
         </div>
         {/* Center: Nav Links */}
         <div className="hidden md:flex space-x-8 relative">
