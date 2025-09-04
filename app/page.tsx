@@ -1,4 +1,5 @@
 import TestimonialCard from "../src/components/TestimonialCard";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -14,12 +15,12 @@ export default function HomePage() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 mb-6 drop-shadow-lg">Build confidence. Get the job.</h1>
           <p className="text-lg md:text-2xl text-blue-800 mb-8 max-w-2xl">Mosu helps students gain real-world experience through virtual job simulations, so you can stand out to employers and land your dream role.</p>
-          <a
-            href="#"
+          <Link
+            href="/signup"
             className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition text-lg"
           >
             Get Started &rarr;
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -59,12 +60,12 @@ export default function HomePage() {
       <section className="py-20 bg-blue-600 text-white text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Ready to Start Your Dream Career?</h2>
         <p className="text-lg mb-8">Join thousands of students building skills and confidence with Mosu.</p>
-        <a
-          href="#"
+        <Link
+          href="/signup"
           className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-100 transition text-lg"
         >
           Enroll for Free
-        </a>
+        </Link>
       </section>
     </>
   );
