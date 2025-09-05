@@ -22,7 +22,7 @@ const programData = {
   ],
 };
 
-export default function LearningInterfacePage({ params }: { params: { slug: string } }) {
+export default function LearningInterfacePage() {
   const [activeTask, setActiveTask] = useState('1.2');
 
   return (

@@ -35,7 +35,7 @@ export default function DashboardPage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <header className="mb-12">
         <h1 className="text-4xl font-bold">Welcome back, {userName}!</h1>
-        <p className="text-lg text-gray-600">Let's continue learning</p>
+        <p className="text-lg text-gray-600">Let&apos;s continue learning</p>
       </header>
 
       <section>

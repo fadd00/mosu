@@ -17,7 +17,7 @@ export default function Footer() {
         {/* First Column: Logo & Mission */}
         <div className="md:col-span-2 flex flex-col space-y-4">
           <span className="text-2xl font-bold text-blue-600">mosu</span>
-          <p className="text-gray-600 text-sm">We're on a mission to get motivated students into great jobs.</p>
+          <p className="text-gray-600 text-sm">We&apos;re on a mission to get motivated students into great jobs.</p>
         </div>
         {/* Link Columns */}
         <div>

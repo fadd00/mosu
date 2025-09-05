@@ -1,15 +1,18 @@
 import TestimonialCard from "../src/components/TestimonialCard";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80"
           alt="Sky background"
-          className="absolute inset-0 w-full h-full object-cover"
+          layout="fill"
+          objectFit="cover"
+          priority
         />
         <div className="absolute inset-0 bg-blue-100 bg-opacity-70" />
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">

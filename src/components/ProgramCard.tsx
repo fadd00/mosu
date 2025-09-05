@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ProgramCardProps {
   logoUrl: string;
@@ -11,7 +12,7 @@ export default function ProgramCard({ logoUrl, title, company, skills }: Program
   return (
     <div className="border rounded-lg p-4 transition-shadow duration-300 hover:shadow-lg">
       <div className="flex items-center mb-4">
-        <img src={logoUrl} alt={`${company} logo`} className="h-12 w-12 object-contain mr-4" />
+        <Image src={logoUrl} alt={`${company} logo`} width={48} height={48} className="object-contain mr-4" />
       </div>
       <h3 className="font-bold text-lg mb-1">{title}</h3>
       <p className="text-gray-600 mb-4">{company}</p>
