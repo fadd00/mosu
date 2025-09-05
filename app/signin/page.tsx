@@ -1,7 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import AuthLayout from '@/src/components/AuthLayout';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
+import { useAuth } from '@/src/context/AuthContext';
 
 function GoogleIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
@@ -15,22 +19,46 @@ function GoogleIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export default function SignInPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const { signIn } = useAuth();
+  const router = useRouter();
+
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    try {
+      await signIn(email, password);
+      router.push('/dashboard');
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <AuthLayout>
       <div className="text-center mb-8">
         <h1 className="text-2xl font-bold text-gray-800">Welcome back!</h1>
         <p className="text-gray-600">Sign in to your account</p>
       </div>
-      <form className="space-y-4">
+      <form className="space-y-4" onSubmit={handleSignIn}>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Email Address</label>
-          <input type="email" id="email" className="w-full p-2 border rounded-md" />
+          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full p-2 border rounded-md" required />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="password">Password</label>
-          <input type="password" id="password" className="w-full p-2 border rounded-md" />
+          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full p-2 border rounded-md" required />
         </div>
-        <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition">Sign In</button>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+        <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition" disabled={loading}>
+          {loading ? 'Signing In...' : 'Sign In'}
+        </button>
         <div className="text-right">
             <Link href="#" className="text-sm text-blue-600 hover:underline">Forgot Password?</Link>
         </div>

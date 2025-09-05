@@ -6,7 +6,7 @@ interface DashboardProgramCardProps {
   title: string;
   company: string;
   status: 'in-progress' | 'completed';
-  progress?: number; // Percentage from 0 to 100
+  progress?: number;
 }
 
 export default function DashboardProgramCard({ slug, title, company, status, progress }: DashboardProgramCardProps) {
@@ -25,10 +25,8 @@ export default function DashboardProgramCard({ slug, title, company, status, pro
           </div>
         )}
         {status === 'completed' && (
-          <Link href={`/dashboard/certificate/${slug}`}>
-            <a className="inline-block mt-2 text-sm font-semibold text-blue-600 hover:underline">
-              View Certificate
-            </a>
+          <Link href={`/dashboard/certificate/${slug}`} className="inline-block mt-2 text-sm font-semibold text-blue-600 hover:underline">
+            View Certificate
           </Link>
         )}
       </div>
