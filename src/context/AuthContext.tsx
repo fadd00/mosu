@@ -7,7 +7,6 @@ import {
   signInWithEmailAndPassword,
   signOut as firebaseSignOut,
   User as FirebaseUser,
-  Auth,
 } from 'firebase/auth';
 import { auth } from '@/src/lib/firebase/clientApp';
 import { createUserProfile } from '@/src/lib/firebase/firestore';
